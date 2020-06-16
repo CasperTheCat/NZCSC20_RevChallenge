@@ -1,0 +1,12 @@
+version: '3'
+services:
+    nzcsc20_revserver:
+        container_name: "NZCSC_Reversing_C2_Server"
+        # volumes:
+        #     - ./:/rev/project
+        build:
+            context: .
+            dockerfile:
+                ./Dockerfile
+        ports:
+            - 8080:8080
